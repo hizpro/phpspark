@@ -1,0 +1,6 @@
+.idea/
+.vscode/
+
+.php-cs-fixer.cache
+
+vendor/
