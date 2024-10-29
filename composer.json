@@ -1,0 +1,35 @@
+{
+    "name": "hizpro/phpspark",
+    "description": "PhpSpark is a collection of reusable PHP components commonly used in web development.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hizpro\\Phpspark\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Harper Jang",
+            "email": "harper.jang@outlook.com"
+        }
+    ],
+    "require-dev": {
+        "phpstan/phpstan": "^1.12",
+        "friendsofphp/php-cs-fixer": "^3.64"
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "scripts": {
+        "cs:check": [
+            "@putenv PHP_CS_FIXER_IGNORE_ENV=1",
+            "php-cs-fixer fix --dry-run --format=txt --verbose --diff --config=.php-cs-fixer.dist.php --ansi"
+        ],
+        "cs:fix": [
+            "@putenv PHP_CS_FIXER_IGNORE_ENV=1",
+            "php-cs-fixer fix --config=.php-cs-fixer.dist.php --ansi --verbose"
+        ]
+    }
+}
